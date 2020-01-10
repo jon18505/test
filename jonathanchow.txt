@@ -1,0 +1,85 @@
+Jonathan Chow 
+Git Homework
+
+Question #1:
+1. 
+pwd
+cd ~/Desktop/NYCDSA
+pwd
+mkdir -p ~/Desktop/NYCDSA/test
+cd ~/Desktop/NYCDSA/test
+pwd
+git init
+2.
+vim
+“Git is good” #entered into the vim screen
+:wq a.txt #pressed esc, then input :wq a.txt to save file
+git add a.txt
+3.
+git status
+4.
+git commit -m "create a.txt file"
+git status
+
+
+Question #2:
+1. 
+mkdir -p ~/Desktop/NYCDSA/test/subtest
+pwd
+Cd ~/Desktop/NYCDSA/test/subtest
+pwd
+vim
+“This is file b” #entered into the vim screen
+:wq b.txt #pressed esc, then input :wq b.txt to save file
+2.
+cd ~/Desktop/NYCDSA/test
+pwd
+vim
+“This is file a2.txt” #entered into the vim screen
+:wq a2.txt #pressed esc, then input :wq a2.txt to save file
+vim
+“This is file a1.txt” #entered into the vim screen
+:wq a1.txt #pressed esc, then input :wq a1.txt to save file
+git add a1.txt
+git add a2.txt
+3.
+git status
+git commit -m "add txt files to repo"
+4.
+git log 
+
+
+Question #3:
+1. 
+Did first part on the Github website
+cd ~/Desktop/NYCDSA/test
+pwd
+git remote add origin https://github.com/jon18505/test.git
+git remote -v
+2.
+vim a.txt
+“Github is awesome” #added to a.txt then pressed esc and entered :wq
+git add a.txt
+git status
+3.
+git diff —staged #couldn’t get git diff by itself to run so ran staged
+4.
+git commit -m "update to a.txt file"
+git push origin master
+
+
+Question #4:
+2.
+vim a1.txt
+“Here is something to read and enjoy” #added to vim a1.txt then pressed esc 									#and :wq
+git add a1.txt
+git checkout HEAD~1 a1.txt 
+cat a1.txt
+vim a1.txt
+“Here are more fun edits” #added to vim a1.txt then pressed esc and :wq
+git add a1.txt
+git status
+git commit -m “final edits”
+git log —-oneline
+git reset HEAD~1
+git log —-oneline
